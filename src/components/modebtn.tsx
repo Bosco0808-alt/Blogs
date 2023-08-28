@@ -34,7 +34,7 @@ export default function ModeBtn() {
       }
       className="m-2 btn btn-secondary"
     >
-      {mode === "dark" ? "☀️" : "☽"}
+      {mode === "dark" ? "☀️" : "🌙"}
     </button>
   );
 }
