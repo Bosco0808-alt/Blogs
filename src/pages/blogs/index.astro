@@ -22,7 +22,11 @@ const blogList = markdownFiles.map((m, id) => ({
 <Layout title="Blogs">
   <div>
     <ul>
-      {blogList.map((m) => <Card title={m.title} href={`/blogs/${m.file}`} />)}
+      {
+        blogList.map((m) => (
+          <Card title={m.title} href={`/Blogs/blogs/${m.file}`} />
+        ))
+      }
     </ul>
   </div>
 </Layout>
