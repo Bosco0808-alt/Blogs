@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { title, frontmatter } = Astro.props;
-import ModeBtn from "../components/modebtn";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!DOCTYPE html>
@@ -29,10 +29,11 @@ import ModeBtn from "../components/modebtn";
     </title>
   </head>
   <body class="m-2">
-    <ModeBtn client:load />
+    <Navbar />
     <span>{frontmatter?.date}</span>
     <slot />
-  </body><style is:global>
+  </body>
+  <style is:global>
     body.dark-mode {
       background-color: black;
     }
