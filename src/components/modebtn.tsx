@@ -3,29 +3,16 @@ import { useState, useEffect } from "react";
 export default function ModeBtn() {
   const [mode, setMode] = useState<"light" | "dark">("light");
   useEffect(() => {
-    const styleElement = document.createElement("style");
-    styleElement.textContent = `
-      ${
-        mode === "dark"
-          ? `
-            h1, p, hr {
-                color: white
-            }
-            
-            body {
-                background-color: black
-            }
-            `
-          : ""
-      }
-      
-    `;
-
-    document.head.appendChild(styleElement);
-
-    return () => {
-      document.head.removeChild(styleElement);
-    };
+    // @ts-expect-error
+    setMode(localStorage.getItem("mode"));
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("mode", mode);
+    if (mode === "dark") {
+      document.body.classList.toggle("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
   }, [mode]);
   return (
     <button

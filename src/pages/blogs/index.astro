@@ -1,0 +1,28 @@
+---
+import * as fs from "fs";
+import * as path from "path";
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+
+const files = fs.readdirSync("./src/pages/blogs");
+const markdownFiles = files
+  .filter((file) => path.extname(file) === ".md")
+  .map((file) => path.basename(file, ".md"));
+const markdownTitles = markdownFiles.map((file) => {
+  const capitalizedFilename = file.charAt(0).toUpperCase() + file.slice(1);
+  return capitalizedFilename.replace(/-/g, " ");
+});
+
+const blogList = markdownFiles.map((m, id) => ({
+  file: m,
+  title: markdownTitles[id],
+}));
+---
+
+<Layout title="Blogs">
+  <div>
+    <ul>
+      {blogList.map((m) => <Card title={m.title} href={`/blogs/${m.file}`} />)}
+    </ul>
+  </div>
+</Layout>
