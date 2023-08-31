@@ -10,6 +10,7 @@ interface Props {
 
 const { title, frontmatter } = Astro.props;
 import Navbar from "../components/Navbar.astro";
+import GithubIcon from "../../public/github.svg";
 ---
 
 <!DOCTYPE html>
@@ -32,6 +33,9 @@ import Navbar from "../components/Navbar.astro";
     <Navbar />
     <span>{frontmatter?.date}</span>
     <slot />
+    <a href="https://github.com/Bosco0808-alt/Blogs"
+      ><img src={GithubIcon} alt="github icon" class="github-icon" /></a
+    >
   </body>
   <style is:global>
     body.dark-mode {
@@ -52,6 +56,9 @@ import Navbar from "../components/Navbar.astro";
 
     body.dark-mode span {
       color: white;
+    }
+    .github-icon {
+      width: 60px;
     }
   </style>
 </html>
