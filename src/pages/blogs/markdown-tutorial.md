@@ -97,3 +97,17 @@ multiple lines beacuse
 they dont have more than 2 line breaks in a row.
 
 ### Links
+
+MarkDown allows you to create links by the `[link-name](url)` syntax
+
+#### Example:
+
+```md
+[This is a link](#)
+```
+
+> `#` creates a link that does nothing, I believe you can also use `javascript:void(0)`
+
+#### Output:
+
+[This is a link](#)
