@@ -20,7 +20,7 @@ Create a .md file and you can start writing markdown.
 
 In VSCode, you can preview markdown files by opening up th command pallete using ctrl + shift + p (or cmd + shift + p on mac). You can also drag them up to the side to view the file and the preview together.
 
-## Markdown Syntax
+## Basic Markdown Syntax
 
 ### Headings
 
@@ -111,3 +111,88 @@ MarkDown allows you to create links by the `[link-name](url)` syntax
 #### Output:
 
 [This is a link](#)
+
+### formatted text
+
+#### Italic text
+To write *italic* text in markdown, you can wrap text in a single ```_``` or ```*```
+
+##### Example:
+
+```md
+*This is italic text*
+
+_This is also italic text_
+```
+
+##### Output:
+
+*This is italic text*
+
+_This is also italic text_
+
+#### Bold  text
+
+To write **Bold** text using markdown, you can wrap text in **Double** ```_``` or ```*```
+
+##### Example
+
+```md
+**This is bold text**
+
+__This is also bold text__
+```
+
+##### Output
+
+**This is bold text**
+
+__This is also bold text__
+
+> You can also write ***Both italic and bold*** text by wrapping text in triple ```_``` or ```*```
+>
+> ###### Example: 
+> ```
+> ***This is Both italic and bold***
+>
+> ___This is Both italic and bold too___
+> ```
+> ###### Output:
+>
+> ***This is Both italic and bold***
+>
+> ___This is Both italic and bold too___
+
+## Not fully supported/standardized syntax
+
+### Raw html
+
+You can write raw html directly in markdown in some variations(such as the github flavor)
+
+#### Example
+
+```md
+<h1>This is an alternative to the markdown <code>"#"</code> Syntax</h1>
+<p>This is a paragraph too</p>
+```
+
+#### Output
+
+<h1>This is an alternative to the markdown <code>"#"</code> Syntax</h1>
+<p>This is a paragraph too</p>
+
+> The output could be just raw html if you are reading this blog in another markdown engine.
+
+The output is identical to:
+```md
+# This is an alternative to the markdown ```"#"``` Syntax
+
+This is a paragraph too
+```
+
+However
+
+- It is not as clean as the markdown syntax
+- It is not fully supported
+
+so try to avoid markdown like this(unless you are trying to render svg graphics, images and other html specific stuff)
