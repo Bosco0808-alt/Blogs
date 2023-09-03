@@ -163,6 +163,52 @@ __This is also bold text__
 >
 > ___This is Both italic and bold too___
 
+### Blockquotes
+
+Blockquotes can be defined using ```>``` before each line
+
+#### Example
+```md
+> This is a blockquote
+> > This is a nested blockquote
+```
+
+#### Output
+> This is a blockquote
+> > This is a nested blockquote
+
+> Note: You can nest as many blockquotes as You like
+
+### Raw text
+
+You can use raw text to handle
+- markdown specific symbols
+- html specific tags
+- html entities
+- syntax highlighting
+
+Raw text can be inline or multi-line
+
+#### Example
+```md
+    ```This is inline raw text```
+    ```js
+    const a = "b"
+    // This is highlighted javacript syntax 
+    // I have to make a tab in front because my markdown engine forces me to do so
+    ```
+```
+
+#### Output
+
+```This is inline raw text```
+```js
+const a = "b"
+// This is highlighted javacript syntax 
+// I have to make a tab in front because my markdown engine forces me to do so
+```
+
+
 ## Not fully supported/standardized syntax
 
 ### Raw html
