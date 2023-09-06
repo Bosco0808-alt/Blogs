@@ -4,7 +4,7 @@ title: How i created this blog
 date: 29/8/2023
 ---
 
-# How i created this blog
+# How I created this blog
 
 I was working on another app when i thought that maybe... I should create my own blog!
 
