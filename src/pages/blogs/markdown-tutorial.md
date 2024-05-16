@@ -242,3 +242,7 @@ However
 - It is not fully supported
 
 so try to avoid markdown like this(unless you are trying to render svg graphics, images and other html specific stuff)
+
+## The end
+
+That's it! Great job! You just learned Astro! Congratulations! 🎉🎉🎉
