@@ -6,6 +6,8 @@ date: 27/4/2025
 
 ###### Note: This blog is just a message to Google
 
+###### Edit: This bug was resolved by Google. Thank you Google dev team!
+
 ## <u>My message to Google</u>
 
 ##### Hello Google,
