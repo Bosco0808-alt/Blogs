@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
-title: Markdown tutorial
+title: :)
 date: 27/4/2025
 ---
 
